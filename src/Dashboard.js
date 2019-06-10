@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Dashboard extends Component {
-  render() {
-    return <div className="animated fadeIn">Hello World</div>;
-  }
+function Dashboard() {
+  return <div className="animated fadeIn">Hello World</div>;
 }
 
 export default Dashboard;
