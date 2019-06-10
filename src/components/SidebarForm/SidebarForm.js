@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class SidebarForm extends Component {
-
   render() {
-    return null
+    return <div></div>;
     // Uncomment following code lines to add Sidebar Form
     // return (
     //   <div className="sidebar-form"></div>

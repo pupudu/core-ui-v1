@@ -1,13 +1,7 @@
-import React, {Component} from 'react';
-import {
-  Nav,
-  NavItem,
-  NavbarToggler,
-  NavbarBrand,
-} from 'reactstrap';
+import React, { Component } from 'react';
+import { NavbarToggler, NavbarBrand } from 'reactstrap';
 
 class Header extends Component {
-
   sidebarToggle(e) {
     e.preventDefault();
     document.body.classList.toggle('sidebar-hidden');
@@ -35,7 +29,10 @@ class Header extends Component {
           <span className="navbar-toggler-icon"></span>
         </NavbarToggler>
         <NavbarBrand href="#"></NavbarBrand>
-        <NavbarToggler className="d-md-down-none mr-auto" onClick={this.sidebarToggle}>
+        <NavbarToggler
+          className="d-md-down-none mr-auto"
+          onClick={this.sidebarToggle}
+        >
           <span className="navbar-toggler-icon"></span>
         </NavbarToggler>
         <NavbarToggler className="d-md-down-none" onClick={this.asideToggle}>

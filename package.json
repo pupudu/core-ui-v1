@@ -1,17 +1,22 @@
 {
-  "name": "@coreui/react",
+  "name": "core-ui-v1",
   "version": "1.0.11",
-  "description": "Open Source Bootstrap Admin Template",
-  "author": "Łukasz Holeczek",
-  "homepage": "http://coreui.io",
-  "copyright": "Copyright 2018 creativeLabs Łukasz Holeczek",
+  "description": "Core UI v1 port",
+  "author": "Pubudu Dodangoda",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.3",
+    "source-map-explorer": "^1.8.0"
   },
   "dependencies": {
     "bootstrap": "4.0.0",
+    "classnames": "^2.2.6",
     "font-awesome": "4.7.0",
     "node-sass": "^4.12.0",
     "react": "16.2.0",
@@ -23,22 +28,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "clean": "rimraf ./build"
+    "lint": "eslint src --fix "
   },
-  "engines": {
-    "node": ">= 8.9.4",
-    "npm": ">= 5.6.0"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
