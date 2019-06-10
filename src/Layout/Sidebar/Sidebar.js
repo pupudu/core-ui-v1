@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Badge, Nav, NavItem, NavLink as RsNavLink } from 'reactstrap';
 import classNames from 'classnames';
-import nav from './_nav';
 import SidebarMinimizer from './SidebarMinimizer';
+
+const nav = {
+  items: [
+    {
+      name: 'Dashboard',
+      url: '/dashboard',
+      icon: 'icon-speedometer',
+      badge: {
+        variant: 'info',
+        text: 'NEW'
+      }
+    }
+  ]
+};
 
 class Sidebar extends Component {
   constructor(props) {

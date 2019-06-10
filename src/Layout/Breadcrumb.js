@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { Route, Link, matchPath } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import routes from '../../routes';
+import routes from '../routes';
 
 const findRouteName = url => {
   let found;
