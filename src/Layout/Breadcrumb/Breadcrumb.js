@@ -1,4 +1,5 @@
 import React from 'react';
+import T from 'prop-types';
 import { Route, Link, matchPath } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import routes from '../../routes';
@@ -42,12 +43,21 @@ const BreadcrumbsItem = ({ match, ...rest }) => {
   return null;
 };
 
+BreadcrumbsItem.propTypes = {
+  match: T.string
+};
+
 const Breadcrumbs = ({ location: { pathname }, match, ...rest }) => {
   const paths = getPaths(pathname);
   const items = paths.map((path, i) => (
     <Route key={i++} path={path} component={BreadcrumbsItem} />
   ));
   return <Breadcrumb>{items}</Breadcrumb>;
+};
+
+Breadcrumbs.propTypes = {
+  location: T.object,
+  match: T.string
 };
 
 export default function BreadCrumb(props) {

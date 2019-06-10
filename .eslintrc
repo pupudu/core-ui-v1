@@ -32,7 +32,6 @@
     ],
     "no-var": "error",
     "prefer-const": "error",
-    "prefer-template": "error",
-    "react/prop-types": "off"
+    "prefer-template": "error"
   }
 }
