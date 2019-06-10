@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { Container } from 'reactstrap';
-import Header from '../../components/Header';
-import Sidebar from '../../components/Sidebar';
-import Breadcrumb from '../../components/Breadcrumb';
-import Aside from '../../components/Aside';
-import Footer from '../../components/Footer';
+import Header from './Layout/Header/Header';
+import Sidebar from './Layout/Sidebar/Sidebar';
+import Breadcrumb from './Layout/Breadcrumb/Breadcrumb';
+import Aside from './Layout/Aside/Aside';
+import Footer from './Layout/Footer/Footer';
 
-import Dashboard from '../../views/Dashboard';
+import Dashboard from './Dashboard';
 
-class Full extends Component {
+class App extends Component {
   render() {
     return (
       <div className="app">
@@ -37,4 +37,4 @@ class Full extends Component {
   }
 }
 
-export default Full;
+export default App;
