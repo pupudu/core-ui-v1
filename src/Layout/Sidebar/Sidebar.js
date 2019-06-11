@@ -89,7 +89,7 @@ class Sidebar extends Component {
     // nav list divider
     const divider = (divider, key) => {
       const classes = classNames('divider', divider.class);
-      return <li key={key} className={classes}></li>;
+      return <li key={key} className={classes} />;
     };
 
     // nav label with nav link
@@ -126,7 +126,7 @@ class Sidebar extends Component {
         <NavItem key={key} className={classes.item}>
           {isExternal(url) ? (
             <RsNavLink href={url} className={classes.link} active>
-              <i className={classes.icon}></i>
+              <i className={classes.icon} />
               {item.name}
               {badge(item.badge)}
             </RsNavLink>
@@ -137,7 +137,7 @@ class Sidebar extends Component {
               activeClassName="active"
               onClick={this.hideMobile}
             >
-              <i className={classes.icon}></i>
+              <i className={classes.icon} />
               {item.name}
               {badge(item.badge)}
             </NavLink>
@@ -155,7 +155,7 @@ class Sidebar extends Component {
             href="http://ta"
             onClick={this.handleClick}
           >
-            <i className={item.icon}></i>
+            <i className={item.icon} />
             {item.name}
           </a>
           <ul className="nav-dropdown-items">{navList(item.children)}</ul>

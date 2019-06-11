@@ -17,7 +17,7 @@ function SidebarMinimizer() {
         sidebarMinimize();
         brandMinimize();
       }}
-    ></button>
+    />
   );
 }
 
