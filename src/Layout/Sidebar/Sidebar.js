@@ -8,216 +8,201 @@ const items = [
   {
     name: 'Dashboard',
     url: '/dashboard',
-    icon: 'icon-speedometer',
+    icon: '🔥',
     badge: {
       variant: 'info',
       text: 'NEW'
     }
   },
   {
-    title: true,
-    name: 'Theme'
+    title: 'Theme'
   },
   {
     name: 'Colors',
     url: '/theme/colors',
-    icon: 'icon-drop'
+    icon: '💅'
   },
   {
     name: 'Typography',
     url: '/theme/typography',
-    icon: 'icon-pencil'
+    icon: '📝'
   },
   {
-    title: true,
-    name: 'Components'
+    title: 'Components'
   },
   {
     name: 'Base',
     url: '/base',
-    icon: 'icon-puzzle',
+    icon: '🎨',
     children: [
       {
         name: 'Breadcrumbs',
         url: '/base/breadcrumbs',
-        icon: 'icon-puzzle',
+        icon: '📦',
         children: [
           {
             name: 'Breadcrumbs',
             url: '/base/breadcrumbs/ta',
-            icon: 'icon-puzzle'
+            icon: '🍞'
           }
         ]
       },
       {
         name: 'Cards',
         url: '/base/cards',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Carousels',
         url: '/base/carousels',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Collapses',
         url: '/base/collapses',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Dropdowns',
         url: '/base/dropdowns',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Forms',
         url: '/base/forms',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Jumbotrons',
         url: '/base/jumbotrons',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'List groups',
         url: '/base/list-groups',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Navs',
         url: '/base/navs',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Paginations',
         url: '/base/paginations',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Popovers',
         url: '/base/popovers',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Progress Bar',
         url: '/base/progress-bar',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Switches',
         url: '/base/switches',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Tables',
         url: '/base/tables',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Tabs',
         url: '/base/tabs',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       },
       {
         name: 'Tooltips',
         url: '/base/tooltips',
-        icon: 'icon-puzzle'
+        icon: '🎨'
       }
     ]
   },
   {
     name: 'Buttons',
     url: '/buttons',
-    icon: 'icon-cursor',
+    icon: '⏯',
     children: [
       {
         name: 'Buttons',
         url: '/buttons/buttons',
-        icon: 'icon-cursor'
+        icon: '▶️'
       },
       {
         name: 'Button dropdowns',
         url: '/buttons/button-dropdowns',
-        icon: 'icon-cursor'
+        icon: '⬇️'
       },
       {
         name: 'Button groups',
         url: '/buttons/button-groups',
-        icon: 'icon-cursor'
+        icon: '⏯'
       },
       {
         name: 'Social Buttons',
         url: '/buttons/social-buttons',
-        icon: 'icon-cursor'
+        icon: '🚻'
       }
     ]
   },
   {
     name: 'Charts',
     url: '/charts',
-    icon: 'icon-pie-chart'
+    icon: '📊'
   },
   {
     name: 'Icons',
     url: '/icons',
-    icon: 'icon-star',
+    icon: '🏵',
     children: [
       {
         name: 'Flags',
         url: '/icons/flags',
-        icon: 'icon-star',
+        icon: '🇱🇰',
         badge: {
           variant: 'success',
           text: 'NEW'
         }
       },
       {
-        name: 'Font Awesome',
-        url: '/icons/font-awesome',
-        icon: 'icon-star',
-        badge: {
-          variant: 'secondary',
-          text: '4.7'
-        }
-      },
-      {
         name: 'Simple Line Icons',
         url: '/icons/simple-line-icons',
-        icon: 'icon-star'
+        icon: '♣️'
       }
     ]
   },
   {
     name: 'Notifications',
     url: '/notifications',
-    icon: 'icon-bell',
+    icon: '🔔',
     children: [
       {
         name: 'Alerts',
         url: '/notifications/alerts',
-        icon: 'icon-bell'
+        icon: '📢'
       },
       {
         name: 'Badges',
         url: '/notifications/badges',
-        icon: 'icon-bell'
+        icon: '🛡'
       },
       {
         name: 'Modals',
         url: '/notifications/modals',
-        icon: 'icon-bell',
-        label: {
-          variant: 'info',
-          class: 'ta'
-        }
+        icon: '🗯'
       }
     ]
   },
   {
     name: 'Widgets',
     url: '/widgets',
-    icon: 'icon-calculator',
+    icon: '📟',
     badge: {
       variant: 'danger',
       text: 'NEW'
@@ -227,37 +212,40 @@ const items = [
     divider: true
   },
   {
-    title: true,
-    name: 'Extras'
+    title: 'Extras'
   },
   {
     name: 'Pages',
     url: '/pages',
-    icon: 'icon-star',
+    icon: '🗒',
     children: [
       {
         name: 'Login',
         url: '/login',
-        icon: 'icon-star'
+        icon: '🔐'
       },
       {
         name: 'Register',
         url: '/register',
-        icon: 'icon-star'
+        icon: '🔏'
       },
       {
         name: 'Error 404',
         url: '/404',
-        icon: 'icon-star'
+        icon: '🤷'
       },
       {
         name: 'Error 500',
         url: '/500',
-        icon: 'icon-star'
+        icon: '🤦'
       }
     ]
   }
 ];
+
+const Icon = props => {
+  return <i style={{ fontStyle: 'normal' }}>{props.children}</i>;
+};
 
 const handleClick = e => {
   e.preventDefault();
@@ -284,7 +272,7 @@ const NavDropdown = props => {
         href="http://ta"
         onClick={handleClick}
       >
-        <i className={props.icon} />
+        <Icon>{props.icon}</Icon>
         {props.name}
       </a>
       <ul className="nav-dropdown-items">{navList(props.children)}</ul>
@@ -296,20 +284,19 @@ const NavWithRo = withRouter(NavDropdown);
 
 const NavLinkItem = item => {
   const { variant, icon, badge, url, name } = item;
-  const classes = {
-    item: classNames(item.class),
-    link: classNames('nav-link', variant ? `nav-link-${variant}` : ''),
-    icon: classNames(icon)
-  };
+  const linkClass = classNames(
+    'nav-link',
+    variant ? `nav-link-${variant}` : ''
+  );
   return (
-    <NavItem className={classes.item}>
+    <NavItem>
       <NavLink
         to={url || ''}
-        className={classes.link}
+        className={linkClass}
         activeClassName="active"
         onClick={hideMobile}
       >
-        <i className={classes.icon} />
+        <Icon>{icon}</Icon>
         {name}
         {badge && <Badge color={badge.variant}>{badge.text}</Badge>}
       </NavLink>
@@ -320,7 +307,7 @@ const NavLinkItem = item => {
 const navList = items => {
   return items.map(item => {
     return item.title ? (
-      <li className="nav-title">{item.name}</li>
+      <li className="nav-title">{item.title}</li>
     ) : item.divider ? (
       <li className="divider" />
     ) : item.children ? (
