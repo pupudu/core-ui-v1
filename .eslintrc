@@ -30,6 +30,7 @@
     "no-var": "error",
     "prefer-const": "error",
     "prefer-template": "error",
-    "react/self-closing-comp": "error"
+    "react/self-closing-comp": "error",
+    "react/prop-types": "off"
   }
 }
