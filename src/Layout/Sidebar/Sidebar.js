@@ -1,26 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from '@reach/router';
-import { Badge, Nav, NavItem } from 'reactstrap';
+import { Badge, Nav, NavItem, NavLink } from 'reactstrap';
 import classNames from 'classnames';
-import { sidebarMinimize } from '../handlers';
+import { sidebarMinimize, hideMobile } from '../handlers';
 import items from './metadata';
-
-const handleClick = e => {
-  e.preventDefault();
-  e.target.parentElement.classList.toggle('open');
-};
-
-const activeRoute = routeName => {
-  return window.location.pathname.indexOf(routeName) > -1
-    ? 'nav-item nav-dropdown open'
-    : 'nav-item nav-dropdown';
-};
-
-const hideMobile = () => {
-  if (document.body.classList.contains('sidebar-mobile-show')) {
-    document.body.classList.toggle('sidebar-mobile-show');
-  }
-};
 
 const Icon = props => {
   return <i style={{ fontStyle: 'normal' }}>{props.children}</i>;
@@ -35,16 +18,15 @@ const SidebarMinimizer = () => (
 );
 
 const NavDropdown = props => {
+  const [open, setOpen] = useState(
+    window.location.pathname.includes(props.url)
+  );
   return (
-    <li className={activeRoute(props.url)}>
-      <a
-        className="nav-link nav-dropdown-toggle"
-        href="http://ta"
-        onClick={handleClick}
-      >
+    <li className={classNames('nav-item nav-dropdown', { open })}>
+      <NavLink className="nav-dropdown-toggle" onClick={() => setOpen(!open)}>
         <Icon>{props.icon}</Icon>
         {props.name}
-      </a>
+      </NavLink>
       <ul className="nav-dropdown-items">{navList(props.children)}</ul>
     </li>
   );
