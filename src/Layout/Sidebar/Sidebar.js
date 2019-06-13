@@ -9,14 +9,6 @@ const Icon = props => {
   return <i style={{ fontStyle: 'normal' }}>{props.children}</i>;
 };
 
-const SidebarMinimizer = () => (
-  <button
-    className="sidebar-minimizer"
-    type="button"
-    onClick={sidebarMinimize}
-  />
-);
-
 const NavDropdown = props => {
   const [open, setOpen] = useState(
     window.location.pathname.includes(props.url)
@@ -79,7 +71,7 @@ const Sidebar = () => {
       <nav className="sidebar-nav">
         <Nav>{navList(items)}</Nav>
       </nav>
-      <SidebarMinimizer />
+      <button className="sidebar-minimizer" onClick={sidebarMinimize} />
     </div>
   );
 };
