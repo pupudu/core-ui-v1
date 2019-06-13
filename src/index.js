@@ -12,4 +12,4 @@ import './scss/core/_dropdown-menu-right.scss';
 // Containers
 import App from './App';
 
-ReactDOM.render(<App path="/" />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
