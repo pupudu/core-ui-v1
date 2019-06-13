@@ -49,18 +49,6 @@
   }
 }
 
-@mixin bg-variant($parent, $color) {
-  #{$parent} {
-    @include border-radius($card-border-radius-inner $card-border-radius-inner $card-border-radius-inner $card-border-radius-inner);
-    color: #fff !important;
-    background-color: $color !important;
-  }
-  a#{$parent} {
-    @include hover-focus {
-      background-color: darken($color, 10%);
-    }
-  }
-}
 
 @mixin card-accent-variant($color) {
   border-top-width: 2px;
