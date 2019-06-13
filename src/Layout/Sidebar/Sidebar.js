@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { Link } from '@reach/router';
 import { Badge, Nav, NavItem } from 'reactstrap';
 import classNames from 'classnames';
 import { sidebarMinimize } from '../handlers';
@@ -10,8 +10,8 @@ const handleClick = e => {
   e.target.parentElement.classList.toggle('open');
 };
 
-const activeRoute = (routeName, location) => {
-  return location.pathname.indexOf(routeName) > -1
+const activeRoute = routeName => {
+  return window.location.pathname.indexOf(routeName) > -1
     ? 'nav-item nav-dropdown open'
     : 'nav-item nav-dropdown';
 };
@@ -34,9 +34,9 @@ const SidebarMinimizer = () => (
   />
 );
 
-const NavDropdown = withRouter(props => {
+const NavDropdown = props => {
   return (
-    <li className={activeRoute(props.url, props.location)}>
+    <li className={activeRoute(props.url)}>
       <a
         className="nav-link nav-dropdown-toggle"
         href="http://ta"
@@ -48,7 +48,7 @@ const NavDropdown = withRouter(props => {
       <ul className="nav-dropdown-items">{navList(props.children)}</ul>
     </li>
   );
-});
+};
 
 const NavLinkItem = item => {
   const { variant, icon, badge, url, name } = item;
@@ -58,8 +58,8 @@ const NavLinkItem = item => {
   );
   return (
     <NavItem>
-      <NavLink
-        to={url || ''}
+      <Link
+        to={`${url}` || ''}
         className={linkClass}
         activeClassName="active"
         onClick={hideMobile}
@@ -67,7 +67,7 @@ const NavLinkItem = item => {
         <Icon>{icon}</Icon>
         {name}
         {badge && <Badge color={badge.variant}>{badge.text}</Badge>}
-      </NavLink>
+      </Link>
     </NavItem>
   );
 };

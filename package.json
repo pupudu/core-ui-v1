@@ -10,13 +10,13 @@
     "lint": "eslint src --fix "
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
     "reactstrap": "^8.0.0"
   },
   "devDependencies": {

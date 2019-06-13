@@ -1,9 +1,9 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Router } from '@reach/router';
 import { Container } from 'reactstrap';
 import Header from './Layout/Header';
 import Sidebar from './Layout/Sidebar/Sidebar';
-import Breadcrumb from './Layout/Breadcrumb';
+import Breadcrumb from './Layout/Breadcrumb/Breadcrumb';
 import Aside from './Layout/Aside';
 import Footer from './Layout/Footer';
 
@@ -18,10 +18,9 @@ function App(props) {
         <main className="main">
           <Breadcrumb />
           <Container fluid>
-            <Switch>
-              <Route path="/dashboard" name="Dashboard" component={Dashboard} />
-              <Redirect from="/" to="/dashboard" />
-            </Switch>
+            <Router>
+              <Dashboard path="/dashboard" />
+            </Router>
           </Container>
         </main>
         <Aside />
