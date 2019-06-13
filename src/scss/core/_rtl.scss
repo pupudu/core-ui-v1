@@ -257,25 +257,4 @@
       }
     }
   }
-
-  // Callouts
-  .callout {
-    border: 0 solid $border-color;
-    border-right-width: .25rem;
-
-    @each $color, $value in $theme-colors {
-      &.callout-#{$color} {
-        border-right-color: $value;
-      }
-    }
-
-    .chart-wrapper {
-      left: 0;
-      float: left;
-    }
-  }
-
-  .callout-default {
-    border-right-color: $text-muted;
-  }
 }
