@@ -3,249 +3,7 @@ import { NavLink, withRouter } from 'react-router-dom';
 import { Badge, Nav, NavItem } from 'reactstrap';
 import classNames from 'classnames';
 import SidebarMinimizer from './SidebarMinimizer';
-
-const items = [
-  {
-    name: 'Dashboard',
-    url: '/dashboard',
-    icon: '🔥',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
-  },
-  {
-    title: 'Theme'
-  },
-  {
-    name: 'Colors',
-    url: '/theme/colors',
-    icon: '💅'
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    icon: '📝'
-  },
-  {
-    title: 'Components'
-  },
-  {
-    name: 'Base',
-    url: '/base',
-    icon: '🎨',
-    children: [
-      {
-        name: 'Breadcrumbs',
-        url: '/base/breadcrumbs',
-        icon: '📦',
-        children: [
-          {
-            name: 'Breadcrumbs',
-            url: '/base/breadcrumbs/ta',
-            icon: '🍞'
-          }
-        ]
-      },
-      {
-        name: 'Cards',
-        url: '/base/cards',
-        icon: '🎨'
-      },
-      {
-        name: 'Carousels',
-        url: '/base/carousels',
-        icon: '🎨'
-      },
-      {
-        name: 'Collapses',
-        url: '/base/collapses',
-        icon: '🎨'
-      },
-      {
-        name: 'Dropdowns',
-        url: '/base/dropdowns',
-        icon: '🎨'
-      },
-      {
-        name: 'Forms',
-        url: '/base/forms',
-        icon: '🎨'
-      },
-      {
-        name: 'Jumbotrons',
-        url: '/base/jumbotrons',
-        icon: '🎨'
-      },
-      {
-        name: 'List groups',
-        url: '/base/list-groups',
-        icon: '🎨'
-      },
-      {
-        name: 'Navs',
-        url: '/base/navs',
-        icon: '🎨'
-      },
-      {
-        name: 'Paginations',
-        url: '/base/paginations',
-        icon: '🎨'
-      },
-      {
-        name: 'Popovers',
-        url: '/base/popovers',
-        icon: '🎨'
-      },
-      {
-        name: 'Progress Bar',
-        url: '/base/progress-bar',
-        icon: '🎨'
-      },
-      {
-        name: 'Switches',
-        url: '/base/switches',
-        icon: '🎨'
-      },
-      {
-        name: 'Tables',
-        url: '/base/tables',
-        icon: '🎨'
-      },
-      {
-        name: 'Tabs',
-        url: '/base/tabs',
-        icon: '🎨'
-      },
-      {
-        name: 'Tooltips',
-        url: '/base/tooltips',
-        icon: '🎨'
-      }
-    ]
-  },
-  {
-    name: 'Buttons',
-    url: '/buttons',
-    icon: '⏯',
-    children: [
-      {
-        name: 'Buttons',
-        url: '/buttons/buttons',
-        icon: '▶️'
-      },
-      {
-        name: 'Button dropdowns',
-        url: '/buttons/button-dropdowns',
-        icon: '⬇️'
-      },
-      {
-        name: 'Button groups',
-        url: '/buttons/button-groups',
-        icon: '⏯'
-      },
-      {
-        name: 'Social Buttons',
-        url: '/buttons/social-buttons',
-        icon: '🚻'
-      }
-    ]
-  },
-  {
-    name: 'Charts',
-    url: '/charts',
-    icon: '📊'
-  },
-  {
-    name: 'Icons',
-    url: '/icons',
-    icon: '🏵',
-    children: [
-      {
-        name: 'Flags',
-        url: '/icons/flags',
-        icon: '🇱🇰',
-        badge: {
-          variant: 'success',
-          text: 'NEW'
-        }
-      },
-      {
-        name: 'Simple Line Icons',
-        url: '/icons/simple-line-icons',
-        icon: '♣️'
-      }
-    ]
-  },
-  {
-    name: 'Notifications',
-    url: '/notifications',
-    icon: '🔔',
-    children: [
-      {
-        name: 'Alerts',
-        url: '/notifications/alerts',
-        icon: '📢'
-      },
-      {
-        name: 'Badges',
-        url: '/notifications/badges',
-        icon: '🛡'
-      },
-      {
-        name: 'Modals',
-        url: '/notifications/modals',
-        icon: '🗯'
-      }
-    ]
-  },
-  {
-    name: 'Widgets',
-    url: '/widgets',
-    icon: '📟',
-    badge: {
-      variant: 'danger',
-      text: 'NEW'
-    }
-  },
-  {
-    divider: true
-  },
-  {
-    title: 'Extras'
-  },
-  {
-    name: 'Pages',
-    url: '/pages',
-    icon: '🗒',
-    children: [
-      {
-        name: 'Login',
-        url: '/login',
-        icon: '🔐'
-      },
-      {
-        name: 'Register',
-        url: '/register',
-        icon: '🔏'
-      },
-      {
-        name: 'Error 404',
-        url: '/404',
-        icon: '🤷'
-      },
-      {
-        name: 'Error 500',
-        url: '/500',
-        icon: '🤦'
-      }
-    ]
-  }
-];
-
-const Icon = props => {
-  return <i style={{ fontStyle: 'normal' }}>{props.children}</i>;
-};
+import items from './metadata';
 
 const handleClick = e => {
   e.preventDefault();
@@ -264,7 +22,11 @@ const hideMobile = () => {
   }
 };
 
-const NavDropdown = props => {
+const Icon = props => {
+  return <i style={{ fontStyle: 'normal' }}>{props.children}</i>;
+};
+
+const NavDropdown = withRouter(props => {
   return (
     <li className={activeRoute(props.url, props.location)}>
       <a
@@ -278,9 +40,7 @@ const NavDropdown = props => {
       <ul className="nav-dropdown-items">{navList(props.children)}</ul>
     </li>
   );
-};
-
-const NavWithRo = withRouter(NavDropdown);
+});
 
 const NavLinkItem = item => {
   const { variant, icon, badge, url, name } = item;
@@ -304,18 +64,21 @@ const NavLinkItem = item => {
   );
 };
 
+const GenericItem = props => {
+  const { title, divider, children } = props;
+  return title ? (
+    <li className="nav-title">{title}</li>
+  ) : divider ? (
+    <li className="divider" />
+  ) : children ? (
+    <NavDropdown {...props} />
+  ) : (
+    <NavLinkItem {...props} />
+  );
+};
+
 const navList = items => {
-  return items.map(item => {
-    return item.title ? (
-      <li className="nav-title">{item.title}</li>
-    ) : item.divider ? (
-      <li className="divider" />
-    ) : item.children ? (
-      <NavWithRo {...item} />
-    ) : (
-      <NavLinkItem {...item} />
-    );
-  });
+  return items.map((item, idx) => <GenericItem {...item} key={idx} />);
 };
 
 const Sidebar = () => {
