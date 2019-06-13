@@ -1,8 +1,5 @@
 import React from 'react';
-
-function sidebarMinimize() {
-  document.body.classList.toggle('sidebar-minimized');
-}
+import { sidebarMinimize } from '../handlers';
 
 function SidebarMinimizer() {
   return (

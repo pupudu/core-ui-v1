@@ -1,20 +1,6 @@
 import React from 'react';
 import { NavbarToggler, NavbarBrand } from 'reactstrap';
-
-function sidebarToggle(e) {
-  e.preventDefault();
-  document.body.classList.toggle('sidebar-hidden');
-}
-
-function mobileSidebarToggle(e) {
-  e.preventDefault();
-  document.body.classList.toggle('sidebar-mobile-show');
-}
-
-function asideToggle(e) {
-  e.preventDefault();
-  document.body.classList.toggle('aside-menu-hidden');
-}
+import { asideToggle, mobileSidebarToggle, sidebarToggle } from './handlers';
 
 function Header() {
   return (
