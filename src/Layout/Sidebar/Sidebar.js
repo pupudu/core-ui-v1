@@ -51,17 +51,19 @@ const NavDropdown = props => {
 };
 
 const NavLinkItem = item => {
-  const { variant, icon, badge, url, name } = item;
-  const linkClass = classNames(
-    'nav-link',
-    variant ? `nav-link-${variant}` : ''
-  );
+  const { variant, icon, badge, url = '', name } = item;
+
   return (
     <NavItem>
       <Link
-        to={`${url}` || ''}
-        className={linkClass}
-        activeClassName="active"
+        to={url}
+        getProps={({ isCurrent }) => ({
+          className: classNames({
+            'nav-link': true,
+            [`nav-link-${variant}`]: variant,
+            active: isCurrent
+          })
+        })}
         onClick={hideMobile}
       >
         <Icon>{icon}</Icon>
