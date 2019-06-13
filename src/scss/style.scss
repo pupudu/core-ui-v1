@@ -1,16 +1,3 @@
-/*!
- * CoreUI - Open Source Bootstrap Admin Template
- * @version v1.0.10
- * @link http://coreui.io
- * Copyright (c) 2018 creativeLabs Łukasz Holeczek
- * @license MIT
- */
+$navbar-brand-logo: url('../img/logo.png');
+@import "~machan/style";
 
-// Override Boostrap variables
-@import "bootstrap-variables";
-
-// Import Bootstrap source files
-@import "~bootstrap/scss/bootstrap";
-
-// Import core styles
-@import "core/core";

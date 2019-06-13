@@ -9,7 +9,7 @@ const ModalButton = () => {
       <Button color="danger" onClick={toggle}>
         Open
       </Button>
-      <Modal isOpen={isOpen} toggle={toggle} className="modal-danger">
+      <Modal isOpen={isOpen} toggle={toggle} className="modal-teal">
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>Lorem ipsum</ModalBody>
         <ModalFooter>
