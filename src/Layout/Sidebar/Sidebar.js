@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { Badge, Nav, NavItem } from 'reactstrap';
 import classNames from 'classnames';
-import SidebarMinimizer from './SidebarMinimizer';
+import { sidebarMinimize } from '../handlers';
 import items from './metadata';
 
 const handleClick = e => {
@@ -25,6 +25,14 @@ const hideMobile = () => {
 const Icon = props => {
   return <i style={{ fontStyle: 'normal' }}>{props.children}</i>;
 };
+
+const SidebarMinimizer = () => (
+  <button
+    className="sidebar-minimizer"
+    type="button"
+    onClick={sidebarMinimize}
+  />
+);
 
 const NavDropdown = withRouter(props => {
   return (
