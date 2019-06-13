@@ -32,123 +32,14 @@ export default [
       {
         name: 'Breadcrumbs',
         url: '/base/breadcrumbs',
-        icon: '📦',
-        children: [
-          {
-            name: 'Breadcrumbs',
-            url: '/base/breadcrumbs/ta',
-            icon: '🍞'
-          }
-        ]
+        icon: '🍞'
       },
       {
         name: 'Cards',
         url: '/base/cards',
         icon: '🎨'
-      },
-      {
-        name: 'Carousels',
-        url: '/base/carousels',
-        icon: '🎨'
-      },
-      {
-        name: 'Collapses',
-        url: '/base/collapses',
-        icon: '🎨'
-      },
-      {
-        name: 'Dropdowns',
-        url: '/base/dropdowns',
-        icon: '🎨'
-      },
-      {
-        name: 'Forms',
-        url: '/base/forms',
-        icon: '🎨'
-      },
-      {
-        name: 'Jumbotrons',
-        url: '/base/jumbotrons',
-        icon: '🎨'
-      },
-      {
-        name: 'List groups',
-        url: '/base/list-groups',
-        icon: '🎨'
-      },
-      {
-        name: 'Navs',
-        url: '/base/navs',
-        icon: '🎨'
-      },
-      {
-        name: 'Paginations',
-        url: '/base/paginations',
-        icon: '🎨'
-      },
-      {
-        name: 'Popovers',
-        url: '/base/popovers',
-        icon: '🎨'
-      },
-      {
-        name: 'Progress Bar',
-        url: '/base/progress-bar',
-        icon: '🎨'
-      },
-      {
-        name: 'Switches',
-        url: '/base/switches',
-        icon: '🎨'
-      },
-      {
-        name: 'Tables',
-        url: '/base/tables',
-        icon: '🎨'
-      },
-      {
-        name: 'Tabs',
-        url: '/base/tabs',
-        icon: '🎨'
-      },
-      {
-        name: 'Tooltips',
-        url: '/base/tooltips',
-        icon: '🎨'
       }
     ]
-  },
-  {
-    name: 'Buttons',
-    url: '/buttons',
-    icon: '⏯',
-    children: [
-      {
-        name: 'Buttons',
-        url: '/buttons/buttons',
-        icon: '▶️'
-      },
-      {
-        name: 'Button dropdowns',
-        url: '/buttons/button-dropdowns',
-        icon: '⬇️'
-      },
-      {
-        name: 'Button groups',
-        url: '/buttons/button-groups',
-        icon: '⏯'
-      },
-      {
-        name: 'Social Buttons',
-        url: '/buttons/social-buttons',
-        icon: '🚻'
-      }
-    ]
-  },
-  {
-    name: 'Charts',
-    url: '/charts',
-    icon: '📊'
   },
   {
     name: 'Icons',
@@ -185,11 +76,6 @@ export default [
         name: 'Badges',
         url: '/notifications/badges',
         icon: '🛡'
-      },
-      {
-        name: 'Modals',
-        url: '/notifications/modals',
-        icon: '🗯'
       }
     ]
   },
