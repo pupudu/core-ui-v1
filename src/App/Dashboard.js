@@ -1,24 +1,13 @@
-import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import React from 'react';
+import classnames from 'classnames';
 
-const ModalButton = () => {
-  const [isOpen, setOpen] = useState(false);
-  const toggle = () => setOpen(!isOpen);
+const Button = ({ color = 'primary', variant, ...props }) => {
+  const _variant = variant ? `-${variant}` : '';
   return (
-    <>
-      <Button color="danger" onClick={toggle}>
-        Open
-      </Button>
-      <Modal isOpen={isOpen} toggle={toggle} className="modal-teal">
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-        <ModalBody>Lorem ipsum</ModalBody>
-        <ModalFooter>
-          <Button color="info" onClick={toggle}>
-            Cancel
-          </Button>
-        </ModalFooter>
-      </Modal>
-    </>
+    <button
+      className={classnames('btn', `btn${_variant}-${color}`)}
+      {...props}
+    />
   );
 };
 
@@ -28,8 +17,17 @@ function Dashboard() {
       <div className="card">
         <div className="card-header">Heading</div>
         <div className="card-body">
-          <button className="btn btn-secondary">Primary</button>{' '}
-          <button className="btn btn-teal">Primary</button> <ModalButton />{' '}
+          <Button color="primary" variant="ghost">
+            Primary
+          </Button>{' '}
+          <Button color="secondary">Secondary</Button>{' '}
+          <Button color="info">Info</Button>{' '}
+          <Button color="success">Success</Button>{' '}
+          <Button color="warning">warning</Button>{' '}
+          <Button color="danger">danger</Button>{' '}
+          <Button color="teal">Teal</Button> <br />
+          <br />
+          <br />
           <label className="switch switch-default switch-success">
             <input type="checkbox" className="switch-input" defaultChecked />
             <span className="switch-label" />

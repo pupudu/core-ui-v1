@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from '@reach/router';
-import { Badge, Nav, NavItem, NavLink } from 'reactstrap';
 import classNames from 'classnames';
 import { sidebarMinimize, hideMobile } from '../handlers';
 import items from './metadata';
@@ -15,10 +14,13 @@ const NavDropdown = props => {
   );
   return (
     <li className={classNames('nav-item nav-dropdown', { open })}>
-      <NavLink className="nav-dropdown-toggle" onClick={() => setOpen(!open)}>
+      <div
+        className="nav-link nav-dropdown-toggle"
+        onClick={() => setOpen(!open)}
+      >
         <Icon>{props.icon}</Icon>
         {props.name}
-      </NavLink>
+      </div>
       <ul className="nav-dropdown-items">{navList(props.children)}</ul>
     </li>
   );
@@ -28,7 +30,7 @@ const NavLinkItem = item => {
   const { variant, icon, badge, url = '', name } = item;
 
   return (
-    <NavItem>
+    <div className="nav-item">
       <Link
         to={url}
         getProps={({ isCurrent }) => ({
@@ -42,9 +44,13 @@ const NavLinkItem = item => {
       >
         <Icon>{icon}</Icon>
         {name}
-        {badge && <Badge color={badge.variant}>{badge.text}</Badge>}
+        {badge && (
+          <div className={classNames('badge', `badge-${badge.variant}`)}>
+            {badge.text}
+          </div>
+        )}
       </Link>
-    </NavItem>
+    </div>
   );
 };
 
@@ -69,7 +75,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <nav className="sidebar-nav">
-        <Nav>{navList(items)}</Nav>
+        <div className="nav">{navList(items)}</div>
       </nav>
       <button className="sidebar-minimizer" onClick={sidebarMinimize} />
     </div>

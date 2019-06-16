@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Router } from '@reach/router';
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import routesNames from './routesNames';
 
 const getPaths = () => {
@@ -19,15 +18,15 @@ const getPaths = () => {
   return paths;
 };
 
-const BreadcrumbsItem = ({ path }) => {
+const BreadcrumbItem = ({ path }) => {
   const name = routesNames[path];
   if (name) {
     return window.location.pathname === path ? (
-      <BreadcrumbItem active>{name}</BreadcrumbItem>
+      <div className="breadcrumb-item active">{name}</div>
     ) : (
-      <BreadcrumbItem>
+      <div className="breadcrumb-item">
         <Link to={path || ''}>{name}</Link>
-      </BreadcrumbItem>
+      </div>
     );
   }
   return null;
@@ -35,11 +34,11 @@ const BreadcrumbsItem = ({ path }) => {
 
 const Breadcrumbs = () => {
   return (
-    <Breadcrumb>
+    <div className="breadcrumb">
       {getPaths().map((path, i) => (
-        <BreadcrumbsItem key={i} path={path} />
+        <BreadcrumbItem key={i} path={path} />
       ))}
-    </Breadcrumb>
+    </div>
   );
 };
 

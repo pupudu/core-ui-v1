@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'reactstrap';
 import { Router } from '@reach/router';
 import Header from './Header';
 import Sidebar from './Sidebar/Sidebar';
@@ -15,9 +14,9 @@ function App(props) {
         <Sidebar />
         <main className="main">
           <Breadcrumb />
-          <Container fluid>
+          <div className="container-fluid">
             <Router>{props.children}</Router>
-          </Container>
+          </div>
         </main>
         <Aside />
       </div>
