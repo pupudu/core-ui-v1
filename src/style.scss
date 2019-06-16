@@ -1,2 +1,7 @@
+$btn-focus-width: 2px;
+
 @import "~machan/style";
 
+.btn.btn:focus {
+  box-shadow: none;
+}
