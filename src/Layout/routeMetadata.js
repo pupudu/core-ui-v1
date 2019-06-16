@@ -1,8 +1,8 @@
-export default [
+const routeMetadata = [
   {
-    name: 'Dashboard',
-    url: '/dashboard',
-    icon: '🔥',
+    name: 'Home',
+    url: '/',
+    icon: '🏠',
     badge: {
       variant: 'info',
       text: 'NEW'
@@ -122,3 +122,46 @@ export default [
     ]
   }
 ];
+
+const accountMetadata = [
+  {
+    name: 'Account',
+    url: '/account',
+    icon: '🔥'
+  },
+  {
+    title: 'Theme'
+  },
+  {
+    name: 'Payments',
+    url: '/account/payments',
+    icon: '💵'
+  },
+  {
+    name: 'Invoices',
+    url: '/account/invoices',
+    icon: '⚖️ '
+  }
+];
+
+const getRouteNames = list => {
+  const names = {};
+
+  list.forEach(item => {
+    names[item.url] = item.name;
+    if (item.children) {
+      const childNames = getRouteNames(item.children);
+      Object.assign(names, childNames);
+    }
+  });
+
+  return names;
+};
+
+export const routeNames = getRouteNames([...routeMetadata, ...accountMetadata]);
+
+export function getMetadata() {
+  return window.location.pathname.includes('account')
+    ? accountMetadata
+    : routeMetadata;
+}

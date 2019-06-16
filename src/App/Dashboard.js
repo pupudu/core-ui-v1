@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { Link } from '@reach/router';
 
 const Button = ({ color = 'primary', variant, ...props }) => {
   const _variant = variant ? `-${variant}` : '';
@@ -20,7 +21,9 @@ function Dashboard() {
           <Button color="primary" variant="ghost">
             Primary
           </Button>{' '}
-          <Button color="secondary">Secondary</Button>{' '}
+          <Link to="/account">
+            <Button color="secondary">Go To Account</Button>{' '}
+          </Link>
           <Button color="info">Info</Button>{' '}
           <Button color="success">Success</Button>{' '}
           <Button color="warning">warning</Button>{' '}

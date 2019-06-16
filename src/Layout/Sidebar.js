@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from '@reach/router';
 import classNames from 'classnames';
-import { sidebarMinimize, hideMobile } from '../handlers';
-import items from './metadata';
+import { sidebarMinimize, hideMobile } from './handlers';
+import { getMetadata } from './routeMetadata';
 
 const Icon = props => {
   return <i style={{ fontStyle: 'normal' }}>{props.children}</i>;
@@ -75,7 +75,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <nav className="sidebar-nav">
-        <div className="nav">{navList(items)}</div>
+        <div className="nav">{navList(getMetadata())}</div>
       </nav>
       <button className="sidebar-minimizer" onClick={sidebarMinimize} />
     </div>

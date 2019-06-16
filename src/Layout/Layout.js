@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import Header from './Header';
-import Sidebar from './Sidebar/Sidebar';
-import Breadcrumb from './Breadcrumb/Breadcrumb';
+import Sidebar from './Sidebar';
+import Breadcrumb from './Breadcrumb';
 import Aside from './Aside';
 import Footer from './Footer';
 
@@ -11,7 +11,9 @@ function App(props) {
     <div className="app">
       <Header />
       <div className="app-body">
-        <Sidebar />
+        <Router>
+          <Sidebar default />
+        </Router>
         <main className="main">
           <Breadcrumb />
           <div className="container-fluid">

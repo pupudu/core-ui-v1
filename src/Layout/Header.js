@@ -1,16 +1,22 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import { asideToggle, mobileSidebarToggle, sidebarToggle } from './handlers';
 import logo from '../img/logo.png';
 
 function Header() {
   return (
     <header className="app-header navbar">
-      <button className="navbar-toggler d-lg-none" onClick={mobileSidebarToggle}>
+      <button
+        className="navbar-toggler d-lg-none"
+        onClick={mobileSidebarToggle}
+      >
         <span className="navbar-toggler-icon" />
       </button>
-      <a href="/" className="navbar-brand">
-        <img src={logo} alt="navbar-brand" />
-      </a>
+      <Link to="/">
+        <div className="navbar-brand">
+          <img src={logo} alt="navbar-brand" />
+        </div>
+      </Link>
       <button
         className="navbar-toggler d-md-down-none mr-auto"
         onClick={sidebarToggle}

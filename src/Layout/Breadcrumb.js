@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Router } from '@reach/router';
-import routesNames from './routesNames';
+import { routeNames } from './routeMetadata';
 
 const getPaths = () => {
   const pathname = window.location.pathname;
@@ -19,7 +19,7 @@ const getPaths = () => {
 };
 
 const BreadcrumbItem = ({ path }) => {
-  const name = routesNames[path];
+  const name = routeNames[path];
   if (name) {
     return window.location.pathname === path ? (
       <div className="breadcrumb-item active">{name}</div>

@@ -6,7 +6,7 @@ import Dashboard from './App/Dashboard';
 function App() {
   return (
     <Layout>
-      <Dashboard path="/dashboard" />
+      <Dashboard path="/" />
     </Layout>
   );
 }
